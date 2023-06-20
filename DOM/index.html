@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson DOM</title>
+</head>
+
+<body>
+<style>
+     pre {
+            color: blue;
+        }
+</style>
+
+    <h1 style="text-align:center;color;text-decoration:underline">DOM</h1>
+
+    <h3>// 1. Write the code to access element which is having id as "text"</h3>
+
+    <pre>
+        const textElement = document.getElementById("text");
+        console.log(textElement.innerText);
+    </pre>
+
+    <h3>// 2. Write the code to access element which is having tag as "h1"</h3>
+
+    <pre>
+        const tagName = document.getElementsByTagName("h1");
+        console.log(tagName[0].innerText);
+    </pre>
+
+    <h3>// 3. Write the code to access element which is having class as "box"</h3>
+
+    <pre>
+        const className = document.getElementsByClassName("box");
+        console.log(className[0].innerText);
+    </pre>
+
+    <h3> // 4. < h1 > Hello < /h1 > .
+        Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h4>
+
+    
+        <button onclick="btnPressed()" id="btn">button to change Header</button>
+        <p>Hello</p>
+    
+
+    <h3>// 5.Create an HTML page having content as Hello world and a button named Replace Text. When
+        user will click on this button page content should be changed to "Welcome to Elevation academy"</h3>
+
+    <a href="newpage.html">Hello World HTML Page.</a>
+
+    <h3>// 6. "< h1 >Hello </ h1>
+
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</h3>
+
+        <h1 id="heading">hello</h1>
+
+    <h3>// 7.Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h3>
+
+    <div class="box"></div>
+    <div style="display: flex; justify-content: space-around; flex-direction: row;" class="container">
+        <div style="display: flex; width: 300px; height: 300px; background-color: blue; border: 2px solid black;" class="it"></div>
+        <div style="display: flex; width: 300px; height: 300px; background-color: blue; border: 2px solid black;" class="it"></div>
+        <div style="display: flex; width: 300px; height: 300px; background-color: blue; border: 2px solid black;" class="it"></div>
+</div>
+<br>
+<button onclick="changeDrxn()">change flex direction</button>
+        <br>
+    
+
+    <h3>// 8.What’s the difference between window vs document? </h3>
+
+    <ul>
+
+        <li><b>Window</b> is the execution context and global object for that context's JavaScript.
+            It is the top most object and outermost element of the object hierarchy.</li>
+
+        <br>
+
+        <li><b>Document</b> contains the DOM, initialized by parsing HTML.Each HTML document that
+            gets loaded into a window becomes a document object. The document contains the contents of the page.</li>
+
+    </ul>
+
+    <br>
+        
+
+       
+    
+
+    <h3>// 9. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep
+        updating every second</h3>
+
+    <pre>
+        <div id="clock" style="font-size: xx-large; font-weight: bolder;"></div>
+
+        function timer(){
+            const time = new Date();
+            const hr = time.getHours();
+            const min = time.getMinutes();
+            const sec = time.getSeconds();
+            console.log(hr, min, sec);
+        }
+        setInterval(timer, 1000)
+    </pre>
+
+  10.  <h3><a href="game.html">Guess the number game.</a></h3>
+
+   
+    <!-- <p id="temp"></p> -->
+    <script src="index.js"></script>
+</body>
+
+</html>
